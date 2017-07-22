@@ -12,10 +12,18 @@ import java.net.URL;
 public class Network_practice {
 
 
+	//一応これで取得はできてる。
+	//今後こんな感じでやっていく
+	//これに対して正規表現ぶつけたら抽出できる。
+	//すでに1ページのデータは取得できてる。
+	//このメソッドでは１ページ分だけ取得してあとは
+	//違うメソッドで正規表現処理した方がいい。
+	
+
 	// TODO 自動生成されたメソッド・スタブ
 
 	private static Proxy proxy = new Proxy(Proxy.Type.HTTP, new InetSocketAddress("xxxxxxxx.co.jp", 80));
-	private static String proxySwitch = "1";
+	private static String proxySwitch = "0";
 
 	public static String callGet(String strGetUrl) {
 
@@ -29,6 +37,7 @@ public class Network_practice {
 			if (proxySwitch.equals("1")) {
 				con = (HttpURLConnection) url.openConnection(proxy);
 			} else {
+				//すでにここで実行している。
 				con = (HttpURLConnection) url.openConnection();
 			}
 
@@ -51,6 +60,7 @@ public class Network_practice {
 				// 1行ずつテキストを読み込む
 				while ((line = bufReader.readLine()) != null) {
 					result.append(line);
+					result.append("\n");
 				}
 				bufReader.close();
 				inReader.close();
