@@ -40,7 +40,52 @@ if(a==1){
 	window.alert('ohayou');
 }
 
-<%//%>
+
+
+<%//配列%>
+
+var ary=new Array();
+var ary_1=new Array(10);
+var ary_2=['A','b'];
+
+document.write(ary_2[0]);
+
+<%//関数%>
+
+function area(a,b){
+
+	result=a*b;
+	return result;
+
+}
+
+<%//イベントハンドら%>
+
+<input type="button" onclick="area()"/>
+	<input type="button" id="btn" onclick="window.alert()"/>
+
+
+
+document.getElementById("#btn").onclick =function(){
+
+	window.alert("konnbanwa");
+
+}
+
+
+<%//値の取得%>
+
+<form name="a" >
+<input name="b" value="1">
+
+document.a.b.value=2;
+
+<%
+
+//階層指定はＨＴＭＬから下っていく、そもそもやる必要がない。
+
+%>
+
 
 
 
