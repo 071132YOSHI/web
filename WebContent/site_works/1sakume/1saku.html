@@ -1,0 +1,137 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>無題ドキュメント</title>
+
+<link rel="stylesheet" type="text/css" href="1.css">
+
+<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+
+<script>
+$(function(){
+    $('input[placeholder]').placeholder();
+});
+</script>
+
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+<script>
+$(function(){
+	$("#mydata")
+		.on("invalid", function(e){
+			if ( e.currentTarget.validity.valueMissing ) {
+		                this.setCustomValidity("必須入力です");
+			}
+			if ( e.currentTarget.validity.patternMismatch ) {
+		                this.setCustomValidity("数値を入力して下さい");
+			}
+		})
+		.on("input",function(){
+			this.blur();
+			this.setCustomValidity("");
+			this.focus();
+		});
+});
+</script>
+
+
+
+
+</head>
+
+<body>
+
+<div id="all">
+
+
+<div id="header">
+	なんとかサイト
+
+	</div>
+
+<div id="login">
+
+    ゲスト様<br>
+    ようこそ
+
+	</div>
+
+	<div id="kaizyo">
+
+	</div>
+
+
+ <ul >
+  <li><a href="">HOME</a></li>
+  <li><a href="">制作実績</a></li>
+  <li><a href="">サービス</a></li>
+  <li><a href="">会社案内</a></li>
+  <li><a href="">ブログ</a></li>
+
+ </ul>
+
+
+
+	<div id="kaizyo">
+
+	</div>
+
+
+</div>
+
+
+
+<div id="main">
+
+
+
+
+
+
+
+
+<form>
+
+<table cellspacing="10" id="table" align="center">
+  <tr>
+    <td>fdfafdfasf   </td>
+	  <td>
+
+            <input
+                type="text" id="mydate" placeholder="半角英数字で入力"
+                pattern="^[0-9]+$" title="&#10 xxx-xxxx-xxxx" required >
+
+</td>
+
+  </tr>
+  <tr>
+    <td>名前</td>
+	  <td>  <input type="text"> </td>
+  </tr>
+
+    <tr>
+    <td>2文</td>
+	  <td>  <input type="text"> <br>
+	  <input type="text"></td>
+  </tr>
+
+
+
+
+	</table>
+
+<input type="submit"　>
+</form>
+
+
+	</div>
+
+
+
+<div id="footer">
+フッターです
+	</div>
+
+</body>
+</html>

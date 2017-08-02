@@ -4,16 +4,22 @@
 //1、とりあえずonclick,onDblClick(ダブルクリック)
 
 function onclick(){
-	
+
 	alert("onclick");
-	
-	
-	
+
+
+
 }
 
 
 function onDblClick(){
-	
+
 	alert("onDblClick");
-	
+
+}
+
+function check(){
+
+	alert("1回毎");
+
 }

@@ -2,6 +2,8 @@
 <html>
 <head>
 
+<link rel="stylesheet" type="text/css" href="1.css">
+
 <script type="text/javascript" src="eventHandler.js"></script>
 <meta charset="UTF-8">
 <title>Insert title here</title>
@@ -11,9 +13,13 @@
 
 <input type="button" value="onclick" onclick="onclick()">
 <br>
-<input type="button" value="onDblClick" onclick="onDblClick()">
-<br>
+<input type="button" value="onDblClick" onDblClick="onDblClick()">
 
+    <input type="text" value="ダブルクリックして下さい"
+        ondblclick="alert('ダブルクリックされました')" >
+<br>
+<input type="text" value="onDblClick" onKeyUp="check()">
+<br>
 
 
 
