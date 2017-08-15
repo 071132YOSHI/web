@@ -4,9 +4,23 @@
 		background: linear-gradient(lightblue 50%,lightblue 5%,white);
 	}
 
+#header_gazou{
+
+
+    margin:0px;
+
+    position:absolute;
+    top:35px;
+    left:0px;
+
+
+
+
+}
+
 
 	#header{
-	padding-left:50px;
+	padding-left:-80px;
 	padding-top:50px;
 	text-align: left;
 	float:left;
