@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+
+<script type="text/javascript">
+
+//html5のみで使える、戻れなくするjavascript
+    history.pushState(null, null, null);
+
+    window.addEventListener("popstate", function() {
+        history.pushState(null, null, null);
+    });
+</script>
+
+
+
+
+</head>
+<body>
+
+
+戻れなくします
+
+<a href="modoru.html">戻れるページに行きます</a>
+
+</body>
+</html>

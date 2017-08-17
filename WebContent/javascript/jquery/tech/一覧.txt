@@ -3,5 +3,11 @@ pulldown
 ２、ｃｓｓをjavascriptから変更する
 ３、javascriptにおけるイベントの取扱い。
 
+modoru,not_modoru
+１、ブラウザバックさせない方法。
+
+javascriptで３行入れるだけ。
+ｈｔｍｌ５でしか実現できないらしい。
+
 
 

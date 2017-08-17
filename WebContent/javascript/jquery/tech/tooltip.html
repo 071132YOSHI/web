@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+
+<script>
+
+//使い方：まずコピペはjavascript=開始のfunction()があるか確認する。そして
+//リストの親にクラス設定、子になんか要素を追加するだけ。これはリスト限定のやつ。
+
+
+
+$(function(){
+
+$("#sample4 li").on({
+	  'mouseenter':function(ev){
+	    var top = $(this).position().top;
+	    var left = $(this).position().left;
+	　　top = Math.floor(top); // Fx対策：整数にする
+	　　left = Math.floor(left); // Fx対策：整数にする
+	    var text = $(this).attr('data-text');
+	    $("body").append('<div id="sample4-tooltips-'+top+'-'+left+'" class="sample4-tooltips">'+text+'</div>');
+	    var obj = $("#sample4-tooltips-"+top+"-"+left);
+	    var x = ev.pageX;
+	    var y = ev.pageY;
+	    obj.css({top: y + 34, left: x + 14}); // ← 表示する位置を適当に調整
+	  },
+	  'mousemove':function(ev){
+	    var top = $(this).position().top;
+	    var left = $(this).position().left;
+	　　top = Math.floor(top); // Fx対策：整数にする
+	　　left = Math.floor(left); // Fx対策：整数にする
+	    var obj = $("#sample4-tooltips-"+top+"-"+left);
+	    var x = ev.pageX;
+	    var y = ev.pageY;
+	    obj.css({top: y + 34, left: x + 14});
+	  },
+	  'mouseleave':function(){
+	    var top = $(this).position().top;
+	    var left = $(this).position().left;
+	　　top = Math.floor(top); // Fx対策：整数にする
+	　　left = Math.floor(left); // Fx対策：整数にする
+	    $("#sample4-tooltips-"+top+"-"+left).remove();
+	  }
+	});
+});
+</script>
+
+<style>
+ul {
+  list-style:none;
+}
+
+#sample4 li {
+/*  position:relative; */
+}
+#sample4 li:hover {
+
+}
+.sample4-tooltips {
+  display: block;
+  position: absolute;
+  z-index: 9999;
+  width: auto;
+  height: auto;
+  padding: 0.3em 0.5em;
+  color: #FFFFFF;
+  font-size: 1.4em;
+  background: #c72439;
+  border-radius: 0.5em;
+}
+.sample4-tooltips:after {
+  width: 100%;
+  content: "";
+  display: block;
+  position: absolute;
+  left: 0.5em;
+  top: -8px;
+  border-top:8px solid transparent;
+  border-left:8px solid #c72439;
+}
+
+
+
+</style>
+
+
+
+
+
+</head>
+<body>
+
+
+
+
+<ul id="sample4">
+  <li data-text="ツールチップ1"><input type="text"></li>
+
+</ul>
+
+
+
+</body>
+</html>

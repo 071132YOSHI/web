@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+<script>
+
+function closePopUp() {
+	  fukidashi.style.display = "none";
+	}
+	function openPopUp() {
+	  closePopUp();
+	  fukidashi.style.display = "block";
+	}
+
+
+</script>
+
+
+
+<style>
+div#main{
+  position: relative;
+}
+
+div#fukidashi{
+  position: absolute;
+  top: 32px;
+  left: 240px;
+  display: none;
+  margin: 0px;
+  padding: 0px;
+  width: 120px;
+  
+}
+
+div#fukidashi:before {
+  content:" ";
+  position: absolute;
+  top: -24px;
+  left: 8px;
+  z-index:1;
+  width: 0;
+  height: 0;
+  border: 12px solid transparent;
+  border-bottom-color: #0000cd;
+}
+
+</style>
+
+
+
+</head>
+<body>
+
+<div id="main">
+  <div id="target" onMouseover="openPopUp()" onMouseout="closePopUp()">
+    この部分にマウスカーソルが乗るとポップアップが出ます。
+　　　　<div id="fukidashi" onMouseover="openPopUp()" onMouseout="closePopUp()">
+       吹き出しポップアップの中身
+　　　　<div>
+  </div>
+</div>
+
+</body>
+</html>
