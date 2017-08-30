@@ -2,6 +2,8 @@ $(function() {
 
 	$('ul.menu').css('display', 'none');
 
+
+	alert("konnbanwa");
 	/*
 	 *
 	 * $('category').hover(function(){
